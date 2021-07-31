@@ -1,9 +1,7 @@
-.page1{
+.navBody{
     background: url("./Assets/background.jpg");
     height:100%;
     width:100%;
-}
-.navBody{
     border:2px solid green;
 }
 .pizzaLogo{
