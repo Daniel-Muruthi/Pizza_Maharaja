@@ -1,0 +1,18 @@
+.page1{
+    background: url("./Assets/background.jpg");
+    height:100%;
+    width:100%;
+}
+.navBody{
+    border:2px solid green;
+}
+.pizzaLogo{
+    /* border-radius: 50% !important; */
+}
+nav > ul{
+    display:flex;
+    justify-content: space-around;
+    margin-left:auto;
+    border:2px solid blue;
+    width:60%
+}
