@@ -1,16 +1,57 @@
+body{
+    background-image: url("./Assets/unos.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+.page1{
+}
 .navBody{
     background: url("./Assets/background.jpg");
-    height:100%;
+    height:fit-content !important;
     width:100%;
     border:2px solid green;
+    border-radius: 1rem;
 }
 .pizzaLogo{
-    /* border-radius: 50% !important; */
+    border-radius: 2rem !important;
 }
 nav > ul{
     display:flex;
     justify-content: space-around;
     margin-left:auto;
-    border:2px solid blue;
+    border:2px solid rgb(76, 76, 219);
     width:60%
+}
+.homeBody{
+    display:flex;
+    /* align-items:center; */
+    justify-content:space-around !important;
+}
+.pizzano{
+    border:2px solid black;
+    padding:5rem;
+    
+}
+.homePizzaTitle{
+    display:flex;
+    justify-content: center;
+    border:2px solid brown;
+}
+.st1{
+    text-align:center;
+    color:rgb(215, 231, 67);
+}
+.st2{
+    color:rgb(195, 29, 29);
+    font-weight:bolder;
+    border:2px solid purple;
+}
+.pizzaPg1{
+    border:2px solid gold;
+}
+.pizzaPg1>.pzPic{
+
+
 }
