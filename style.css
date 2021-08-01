@@ -156,6 +156,9 @@ nav > ul{
     font-weight: 800;
     text-align:center;
 }
+.page3{
+    font-family: Gothic A1;
+}
 .contact{
     height:3rem;
 }
@@ -167,6 +170,50 @@ nav > ul{
     line-height: 45px;
     color:#DEB524;
 }
+.location{
+    display:flex;
+}
+.footer1{
+    display:flex;
+    justify-content:space-around;
+}
+.findUs{
+    width:32%;
+}
+.findUsP{
+    /* width:32%; */
+    border:2px solid blue;
+}
+.emptyLine{
+    height:15rem;
+    width:1px;
+    border:1px solid grey;
+    box-shadow:0px,0px,4px,3px grey;
+    margin:1rem;
+}
+.services{
+    border:2px solid green;
+    width:32%;
+}
+.jobs{
+    vertical-align:middle;
+    line-height:3rem;
+    width:32%;
+    border:2px solid green;
+}
+.footerList{
+    font-weight:bold;
+    font-size: 24px;
+}
+.findUs h1, .services h1, .jobs h1{
+    text-align:center;
+}
+.socials >.icons{
+    display:flex;
+    justify-content:center;
+}
+
+
 /* --------Order.html----------- */
 
 .navBody1{
