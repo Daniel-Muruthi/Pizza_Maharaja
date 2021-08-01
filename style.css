@@ -128,6 +128,9 @@ nav > ul{
 .page2{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(195, 29, 29,1) 35%, rgba(222,181,36,1) 100%);
+    width:100%;
+    height:100%;
+    padding-bottom:2rem;
 }
 .pgTwoHd > h1{
     font-family: Gothic A1;
@@ -153,8 +156,17 @@ nav > ul{
     font-weight: 800;
     text-align:center;
 }
-
-
+.contact{
+    height:3rem;
+}
+.contactHeader{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+}
 /* --------Order.html----------- */
 
 .navBody1{
