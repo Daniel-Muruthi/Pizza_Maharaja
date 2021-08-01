@@ -42,11 +42,15 @@
 
 }
 nav > ul{
+    vertical-align:middle;
+    line-height:3rem;
+    font-size:x-large;
     display:flex;
     justify-content: space-around;
     margin-left:auto;
     border:2px solid rgb(76, 76, 219);
-    width:60%
+    width:60%;
+    font-family: Gothic A1;
 }
 .homeBody{
     display:flex;
@@ -194,6 +198,8 @@ nav > ul{
 .services{
     border:2px solid green;
     width:32%;
+    vertical-align:middle;
+    line-height:3rem;
 }
 .jobs{
     vertical-align:middle;
