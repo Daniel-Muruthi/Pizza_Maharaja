@@ -31,15 +31,23 @@
                 </ul>
             </nav>
         </div>
-        <div class="container deliveryLocation my-4 bg-success">
-            <div>
-                <p>DELIVERY METHOD</p>
+        <div class="container deliveryLocation my-4 bg-success p-5">
+            <div class="locationBody mx-auto">
+                <div class="locationHeader">
+                    <p>DELIVERY METHOD</p>
+                </div>
+                <div class="deliveryChoice my-4">
+                    <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery" required>
+                    <label for="delivery">Delivery</label>
+                    <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect" required>
+                    <label for="collect">Collect</label>
+                </div>
+                <div class="locationName my-4">
+                    <input type="text" id="mahali" placeholder="enter location..." required>
+                </div>
             </div>
-            <div class="">
-                <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery">
-                <label for="delivery">Delivery</label>
-                <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect">
-                <label for="collect">Collect</label>
+            <div class="marqueeText mt-2">
+                <marquee>Free Delivery Within Nairobi's CBD</marquee>
             </div>
         </div>
         <div class="menuItemsBody my-4" >
@@ -79,11 +87,6 @@
                 <div class="priceCalculator">
                     <div class="result text-center">Total Amount = $ <span>0</span></div>
                 </div>
-            </div>
-            <div>
-                <button class="btn">
-                    <a href="./index.html">Home</a>
-                </button>
             </div>
         </div>
     </div>

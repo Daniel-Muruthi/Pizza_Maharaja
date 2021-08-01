@@ -5,13 +5,10 @@
     /* background-color:whitesmoke; */
     width:100%;
     height:100%;
-}
-.page1{
     position:relative;
     display:flex;
     flex-direction: column;
     justify-content: center;
-
 }
 .navBody{
     /* background: url("./Assets/background.jpg"); */
@@ -232,11 +229,29 @@ nav > ul >a:hover{
     transform:scale(1.5);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------Order.html----------- */
+
+
+
+
+
+
 .orderBody{
     background-image: url("./Assets/imgonline-com-ua-twotoone-A9hhfrH6ASG7.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:contain;
     width:100%;
     height:100%;
 }
@@ -245,6 +260,32 @@ nav > ul >a:hover{
 }
 .deliveryLocation{
     border:2px solid white;
+}
+.locationBody{
+    border:2px solid white;
+    width:max-content;
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;
+}
+.marqueeText{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;  
+}
+.menuItemsBody{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;
 }
 .menuText{
     border:2px solid rgba(249, 210, 67, 0.5);
