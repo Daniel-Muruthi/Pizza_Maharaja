@@ -1,22 +1,43 @@
-body{
+.page1{
     background-image: url("./Assets/unos.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* background-color:whitesmoke; */
+    width:100%;
+    height:100%;
+}
+
+.orderBody{
+    background-image: url("./Assets/imgonline-com-ua-twotoone-A9hhfrH6ASG7.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-color:whitesmoke;
     width:100%;
     height:100%;
 }
+
 .page1{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 .navBody{
-    background: url("./Assets/background.jpg");
+    /* background: url("./Assets/background.jpg"); */
+    background-color:white;
     height:fit-content !important;
-    width:100%;
-    border:2px solid green;
-    border-radius: 1rem;
+    width:98%;
+    
+    /* border:2px solid green; */
+    /* border-radius: 1rem; */
 }
 .pizzaLogo{
-    border-radius: 2rem !important;
+    /* border-radius: 2rem !important; */
+    border:2px solid black;
+    box-shadow:0px,0px,4px,3px, white;
+    margin-left: 1rem;
+
 }
 nav > ul{
     display:flex;
@@ -29,22 +50,48 @@ nav > ul{
     display:flex;
     flex-direction: column;
     border:2px solid yellow;
-    width:80%;
+    background:url("./Assets/background.jpg");
+    width:75%;
     align-items:center;
-    /* justify-content:space-around !important; */
 }
-.intro, .intro2{
-    color:gold;
-    font-weight:bolder;
+.maharaja{
+    border:2px solid white;
+    box-shadow:0px, 0px, 4px, 3px;
+    /* background-color:rgba(150,150,150,0.5); */
+    padding:10px;
+    border-radius:1rem;
+    text-align:center;
+    width:60%;
+}
+.intro p{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+
+}
+.intro2{
+    font-family: 'Satisfy', cursive;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+}
+.intro2 p{
+    /* border:2px solid white; */
+}
+.intro2 img{
+    /* border:2px solid white; */
 }
 .hrLine{
-    border:2px solid red;
+    border:2px solid #DEB524;
     width:60%;
 }
 .pizzano{
     border:2px solid black;
-    background-color:rgba(255, 255, 255,0.3);
-    padding:5rem;
+    /* background-color:rgba(255, 255, 255,0.3); */
+    padding:2rem;
     width:60%;
     
 }
@@ -52,6 +99,13 @@ nav > ul{
     display:flex;
     justify-content: center;
     border:2px solid brown;
+}
+.homePizzaTitle p{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
 }
 .st1{
     text-align:center;
@@ -68,4 +122,43 @@ nav > ul{
 .pizzaPg1>.pzPic{
 
 
+}
+
+
+
+/* --------Order.html----------- */
+
+.navBody1{
+    background: url("./Assets/imgonline-com-ua-twotoone-A9hhfrH6ASG7.jpg");
+    height:fit-content !important;
+    width:100%;
+    border:2px solid green;
+    border-radius: 1rem;
+}
+.menuText{
+    border:2px solid rgba(249, 210, 67, 0.5);
+    background:rgba(249, 210, 67, 0.5)
+
+}
+.menuBody{
+    border:2px solid blue;
+    display:flex;
+    justify-content: space-around;
+    background-color:rgba(161, 66, 32 ,0.8);
+
+}
+.priceCalculator{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+.result{
+    vertical-align:middle;
+    line-height:3rem;
+    border:2px solid gold;
+    width:15rem;
+    height:3rem;
+    background:rgba(249, 210, 67, 0.5);
+    color:white
 }
