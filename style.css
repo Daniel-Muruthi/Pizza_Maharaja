@@ -289,7 +289,7 @@ nav > ul >a:hover{
 }
 .menuText{
     border:2px solid rgba(249, 210, 67, 0.5);
-    background:rgba(249, 210, 67, 0.5)
+    background-color:#DEB524;
 
 }
 .menuBody{
@@ -297,7 +297,7 @@ nav > ul >a:hover{
     display:flex;
     justify-content: space-around;
     background-color:rgba(161, 66, 32 ,0.8);
-    height:fit-content;
+    height:30rem;
 
 }
 .priceCalculator{
@@ -311,7 +311,7 @@ nav > ul >a:hover{
     line-height:3rem;
     border:2px solid gold;
     width:15rem;
-    height:3rem;
+    height:max-content;
     background:rgba(249, 210, 67, 0.5);
     color:white
 }
