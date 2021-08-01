@@ -25,9 +25,11 @@
 }
 .navBody{
     /* background: url("./Assets/background.jpg"); */
+    border:2px solid grey;
     background-color:white;
     height:fit-content !important;
-    width:98%;
+    width:100%;
+    box-shadow:0px, 0px, 4px, 3px grey !important;
     
     /* border:2px solid green; */
     /* border-radius: 1rem; */
@@ -123,7 +125,34 @@ nav > ul{
 
 
 }
-
+.page2{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(195, 29, 29,1) 35%, rgba(222,181,36,1) 100%);
+}
+.pgTwoHd > h1{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+}
+.aboutPr{
+    border:2px solid blue;
+    box-shadow:0px 0px 4px 3px white;
+    width:75%;
+    padding:3rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+.aboutPr > p{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    text-align:center;
+}
 
 
 /* --------Order.html----------- */
