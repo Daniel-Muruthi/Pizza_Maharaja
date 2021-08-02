@@ -16,7 +16,7 @@
     <title>Pizza Maharaja Order Page</title>
 </head>
 <body>
-    <div class="orderBody pt-2">
+    <div class="orderBody pt-2" id="orderBody">
         <!-- navbar section -->
         <div class="orderNav navBody container">
             <nav class="navbar navbar-expand-sm my-2">
@@ -25,13 +25,23 @@
                 </div>
                 <ul class="navbar-light list-unstyled list-inline">
                     <a class="btn bg-outline-warning btn-lg list-inline-item" href="./index.html">Home</a>
-                    <a class="btn bg-outline-warning btn-lg list-inline-item" href="#page2">About</a>
+                    <a class="btn bg-outline-warning btn-lg list-inline-item" href="#menu">Menu</a>
                     <a class="btn bg-outline-warning btn-lg list-inline-item" href="#page3">Contact Us <span class="fa fa-phone"></span></a>
-                    <a class="btn bg-warning btn-lg list-inline-item" href="./order.html">Order Now <span class="fa fa-shopping-cart"></span></a>
+                    <a class="btn bg-warning btn-lg list-inline-item disabled" href="./order.html">Order Now <span class="fa fa-shopping-cart"></span></a>
                 </ul>
             </nav>
         </div>
         <div class="container deliveryLocation my-4 bg-success p-5">
+            <div class="jinaBody mx-auto m-3">
+                <div class="jina m-3">
+                    <p>First Name :</p>
+                    <input type="text" class="nameValue" placeholder="Enter name..." required>
+                </div>
+                <div class="phoneNumber m-3">
+                    <p>Phone Num:</p>
+                    <input type="number" placeholder="Enter Number..." required>
+                </div>
+            </div>
             <div class="locationBody mx-auto">
                 <div class="locationHeader">
                     <p>DELIVERY METHOD</p>
@@ -46,11 +56,14 @@
                     <input type="text" id="mahali" placeholder="enter location..." required>
                 </div>
             </div>
+            <div class="mt-2 submitLocation">
+                <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliver()">Submit</button>
+            </div>
             <div class="marqueeText mt-2">
                 <marquee>Free Delivery Within Nairobi's CBD</marquee>
             </div>
         </div>
-        <div class="menuItemsBody my-4" >
+        <div class="menuItemsBody my-4" id="menu">
             <div class="container menuText">
                 <h1 class="text-center" style="color:#a14220
                 ">
@@ -63,35 +76,35 @@
                         Pizza Size
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Small</a>
-                        <a class="dropdown-item" href="#">Medium</a>
-                        <a class="dropdown-item" href="#">Large</a>
+                        <a class="dropdown-item small" href="#">Small</a>
+                        <a class="dropdown-item medium" href="#">Medium</a>
+                        <a class="dropdown-item large" href="#">Large</a>
                     </div>
                 </div>
                 <div class="dropdown m-4">
                     <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Crust Type</button>
                     <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item">Cheese Crust</a>
-                        <a href="#" class="dropdown-item">Classic</a>
-                        <a href="#" class="dropdown-item">Crispy</a>
-                        <a href="#" class="dropdown-item">Glutten-Free</a>
-                        <a href="#" class="dropdown-item">Stuffed</a>
-                        <a href="#" class="dropdown-item">Thin</a>
+                        <a href="#" class="dropdown-item cheeseCrust">Cheese Crust</a>
+                        <a href="#" class="dropdown-item Classic">Classic</a>
+                        <a href="#" class="dropdown-item Crispy">Crispy</a>
+                        <a href="#" class="dropdown-item glutten">Glutten-Free</a>
+                        <a href="#" class="dropdown-item stuffed">Stuffed</a>
+                        <a href="#" class="dropdown-item thin">Thin</a>
                     </div>
                 </div>
                 <div class="dropdown m-4">
                     <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Toppings</button>
                     <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item">Bacon 🥓 </a>
-                        <a href="#" class="dropdown-item">Black Olives</a>
-                        <a href="#" class="dropdown-item">Green Peppers</a>
-                        <a href="#" class="dropdown-item">Extra Cheese🧀</a>
-                        <a href="#" class="dropdown-item">Mushrooms 🍄</a>
-                        <a href="#" class="dropdown-item">Onions </a>
-                        <a href="#" class="dropdown-item">Pepperoni</a>
-                        <a href="#" class="dropdown-item">Pineapple🍍</a>
-                        <a href="#" class="dropdown-item">Sausage</a>
-                        <a href="#" class="dropdown-item">Spinach</a>
+                        <a href="#" class="dropdown-item bacon">Bacon 🥓 </a>
+                        <a href="#" class="dropdown-item olives">Black Olives</a>
+                        <a href="#" class="dropdown-item pepper">Green Peppers</a>
+                        <a href="#" class="dropdown-item extraCheese">Extra Cheese🧀</a>
+                        <a href="#" class="dropdown-item mushroom">Mushrooms 🍄</a>
+                        <a href="#" class="dropdown-item onions">Onions </a>
+                        <a href="#" class="dropdown-item pepperoni">Pepperoni</a>
+                        <a href="#" class="dropdown-item pineapple">Pineapple🍍</a>
+                        <a href="#" class="dropdown-item sausage">Sausage</a>
+                        <a href="#" class="dropdown-item spinach">Spinach</a>
                     </div>
                 </div>
                 <div class="priceCalculator">
@@ -102,10 +115,10 @@
     </div>
 
 
-    <!-- I started here -->
+    <!-- I started here when pasting the footer section -->
 
     <div id="up" class="d-block m-3" align="right">
-        <a class="btn btn-outline-success m-2" href="#navBody"><p class="p-1">⏫<br>Scroll Up</p></a>
+        <a class="btn btn-outline-success m-2" href="#orderBody"><p class="p-1">⏫<br>Scroll Up</p></a>
     </div>
     <div class="page3" id="page3">
         <div class="contact card">
@@ -184,7 +197,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"crossorigin="anonymous"></script>
+    <script src="./style.css"></script>
 </body>
 </html>

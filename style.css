@@ -261,6 +261,37 @@ nav > ul >a:hover{
 .deliveryLocation{
     border:2px solid white;
 }
+.jinaBody{
+    border:2px solid white;
+    width:max-content;
+}
+.jina{
+    display:flex;
+    text-align:center;
+    border:2px solid blue;
+}
+.jina p{
+    border:2px solid gold;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-family:Gothic A1;
+}
+.phoneNumber{
+    display:flex;
+    text-align:center;
+    border:2px solid blue;
+}
+.phoneNumber p{
+    border:2px solid gold;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-family:Gothic A1;
+}
+.delivery{
+    font-family:Gothic A1;
+}
 .locationBody{
     border:2px solid white;
     width:max-content;
@@ -270,6 +301,9 @@ nav > ul >a:hover{
     font-style: normal;
     font-weight: 800;
     padding:1rem;
+}
+.submitLocation{
+    text-align:center;
 }
 .marqueeText{
     color:white;
