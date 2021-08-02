@@ -23,3 +23,10 @@ const deliver= function(){
 }
 deliver();
 
+function pizzaSize(checkbox){
+    var sizeChoice =document.getElementsByName('size');
+    sizeChoice.forEach((item)=> {
+        if (item !== checkbox)item.checked = false
+    })
+}
+
