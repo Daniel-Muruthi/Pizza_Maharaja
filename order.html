@@ -13,6 +13,9 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <script src="sweetalert2.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Pizza Maharaja Order Page</title>
 </head>
@@ -31,42 +34,6 @@
                     <a class="btn bg-warning btn-lg list-inline-item disabled" href="./order.html">Order Now <span class="fa fa-shopping-cart"></span></a>
                 </ul>
             </nav>
-        </div>
-        <div class="container deliveryLocation my-4 bg-success p-5">
-            <form name="details" onsubmit="return false">
-                <div class="detailsBody">
-                    <div class="jinaBody mx-auto m-3">
-                        <div class="jina m-3">
-                            <p>First Name :</p>
-                            <input type="text" class="nameValue" id="nameValue" placeholder="Enter name..." required>
-                        </div>
-                        <div class="phoneNumber m-3">
-                            <p>Phone Num:</p>
-                            <input type="tel" id="phoneNumber" placeholder="Enter Number..." required>
-                        </div>
-                    </div>
-                    <div class="locationBody mx-auto">
-                        <div class="locationHeader">
-                            <p>DELIVERY METHOD</p>
-                        </div>
-                        <div class="deliveryChoice my-4">
-                            <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery" required>
-                            <label for="delivery">Delivery</label>
-                            <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect" required>
-                            <label for="collect">Collect</label>
-                        </div>
-                        <div class="locationName my-4">
-                            <input type="text" id="mahali" placeholder="enter location..." required>
-                        </div>
-                    </div>
-                    <div class="mt-2 submitLocation">
-                        <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliver()">Submit</button>
-                    </div>
-                </div>
-            </form>
-            <div class="marqueeText mt-2">
-                <marquee>Free Delivery Within Nairobi's CBD</marquee>
-            </div>
         </div>
         <div class="menuItemsBody my-4" id="menu">
             <div class="container menuText">
@@ -114,11 +81,47 @@
                     </div>
                 </div>
                 <div class="priceCalculator">
-                    <div class="result text-center"><p>Total Amount <br>= $ <span id="charges">0</span></p></div>
+                    <div class="result text-center"><p>Total Amount <br>= Ksh <span id="charges">0</span></p></div>
                 </div>
             </div>
             <div class="mt-2 submitPizza" align="center">
-                <button type="submit" class="btn btn-warning btn-lg submitPz" id="submitPz" onclick="boxChecker()">Submit</button>
+                <button type="submit" class="btn btn-warning btn-lg submitPz" id="submitPz" onclick="boxChecker()">Calculate</button>
+            </div>
+        </div>
+        <div class="container deliveryLocation my-4 bg-success p-5">
+            <!-- <form name="details" onsubmit="return false">
+            </form> -->
+            <div class="detailsBody">
+                <div class="jinaBody mx-auto m-3">
+                    <div class="jina m-3">
+                        <p>First Name :</p>
+                        <input type="text" class="nameValue text-capitalize" id="nameValue" placeholder="Enter name..." required>
+                    </div>
+                    <div class="phoneNumber m-3">
+                        <p>Phone Num:</p>
+                        <input type="tel" id="phoneNumber" placeholder="Enter Number..." required>
+                    </div>
+                </div>
+                <div class="locationBody mx-auto">
+                    <div class="locationHeader">
+                        <p>DELIVERY METHOD</p>
+                    </div>
+                    <div class="deliveryChoice my-4">
+                        <input type="radio" name="delivery" value="delivery" id="delivery" onclick="activate()" class="delivery" required>
+                        <label for="delivery">Delivery</label>
+                        <input type="radio" name="delivery" value="selfCollect" id="collect" onclick="activate()" class="collect" required>
+                        <label for="collect">Collect</label>
+                    </div>
+                    <div class="locationName my-4">
+                        <input type="text" id="mahali" placeholder="enter location..." disabled required>
+                    </div>
+                </div>
+                <div class="mt-2 submitLocation">
+                    <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliveryMode()">Checkout</button>
+                </div>
+            </div>
+            <div class="marqueeText mt-2">
+                <marquee>Free Delivery Within Nairobi's CBD</marquee>
             </div>
         </div>
     </div>

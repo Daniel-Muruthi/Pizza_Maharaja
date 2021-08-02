@@ -1,3 +1,53 @@
+
+var phoneNumber=document.getElementById("phoneNumber").value;
+let delivery=document.getElementById("delivery");
+let collect=document.getElementById("collect");
+// let location=document.getElementById("mahali");
+//make input location key inactive for collect
+function activate(){
+    if(delivery.checked){
+        document.getElementById("mahali").disabled=false;
+    }
+    else if(collect.checked){
+        document.getElementById("mahali").value="CBD";
+        document.getElementById("mahali").disabled=true;
+    }
+}
+activate();
+//submit button
+
+//capturing the name value
+function getName(){
+    var jina=document.getElementById("nameValue").value;
+    return jina;
+}
+getName();
+function getPhone(){
+    var phoneNumber=document.getElementById("phoneNumber").value;
+    return phoneNumber;
+}
+getPhone();
+function getLocation(){
+    let location=document.getElementById("mahali").value;
+    return location;
+}
+getLocation();
+
+let identity=getName();
+let myLine = getPhone();
+let zone = getLocation();
+function deliveryMode(){
+    Swal.fire({
+        icon: 'info',
+        title: `Hello ${getName()} 👋`,
+        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour!`,
+        button:'<a href="#menu">ok</a>'
+    })
+}
+deliveryMode();
+
+
+
 // Ensuring only one checkbox can be checked at a time for pizza size
 
 function pizzaSize(checkbox){
@@ -24,7 +74,7 @@ function boxChecker(){
     var large = document.getElementById("large");
     var xlarge = document.getElementById("xlarge");
     if(small.checked){
-        alert(totalAmount += 150);
+        totalAmount += 150;
     }
     else if(medium.checked){
         totalAmount += 400;
@@ -44,7 +94,7 @@ function boxChecker(){
     var stuffed =document.getElementById("stuffed");
     var thin =document.getElementById("thin");
     if(cheese.checked){
-        alert(totalAmount += 200);
+        totalAmount += 200;
     }
     else if(classic.checked){
         totalAmount += 150;
@@ -75,7 +125,7 @@ function boxChecker(){
     var spinach=document.getElementById("spinach");
 
     if(bacon.checked){
-        alert(totalAmount += 200);
+        totalAmount += 200;
     }
     if(blackOlives.checked){
         totalAmount += 100;
