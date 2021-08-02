@@ -22,11 +22,23 @@ const deliver= function(){
     }
 }
 deliver();
-
+//pizza size checkbox choosing function
 function pizzaSize(checkbox){
     var sizeChoice =document.getElementsByName('size');
-    sizeChoice.forEach((item)=> {
-        if (item !== checkbox)item.checked = false
+    sizeChoice.forEach((box)=> {
+        if (box !== checkbox){
+            box.checked = false;
+        }
     })
 }
+//pizza crust type choosing function
+function crustType(checkbox){
+    var crustChoice = document.getElementsByName("pizzaSize");
+    crustChoice.forEach((box)=>{
+        if(box!==checkbox){
+            box.checked = false;
+        }
+    })
+}
+
 
