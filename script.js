@@ -1,44 +1,110 @@
-//This is the delivery method choice part
+// Ensuring only one checkbox can be checked at a time for pizza size
 
-var firstName = document.getElementById("nameValue").value;
-var phoneNumber = document.getElementById("phoneNumber").value;
-var total;
-const deliver= function(){
-    if((document.querySelector("#submitBtn").clicked) && (document.querySelector("#nameValue").value=="" || document.querySelector("#nameValue").value==" " )){
-        alert("Please enter your name!");
-    }
-    else if(document.querySelector("#submitBtn").clicked && document.querySelector("#phoneNumber").value==""){
-        alert(`${firstName} please enter your phone number!`);
-    }
-    else if(document.querySelector("#delivery").checked){
-        document.querySelector("#mahali").disabled==false;
-        alert(`${firstName}`);
-
-
-    }
-    else if(document.querySelector("collect").checked){
-        document.querySelector("#mahali").disabled==true;
-        alert(`${firstName}`);
-    }
-}
-deliver();
-//pizza size checkbox choosing function
 function pizzaSize(checkbox){
-    var sizeChoice =document.getElementsByName('size');
-    sizeChoice.forEach((box)=> {
-        if (box !== checkbox){
-            box.checked = false;
-        }
+    let sizePz = document.getElementsByName('size');
+    sizePz.forEach((item) => {
+        if (item !== checkbox) item.checked = false;
     })
 }
-//pizza crust type choosing function
+
+//Ensuring only one checkbox can be checked for crust type
+
 function crustType(checkbox){
-    var crustChoice = document.getElementsByName("pizzaSize");
-    crustChoice.forEach((box)=>{
-        if(box!==checkbox){
-            box.checked = false;
-        }
+    let crustPz = document.getElementsByName('pizzaSize');
+    crustPz.forEach((item) => {
+        if(item !== checkbox) item.checked = false;
     })
 }
+//check which button has been checked
+function boxChecker(){
+    var totalAmount=0;
+    //pizza size
+    var small = document.getElementById("small");
+    var medium = document.getElementById("medium");
+    var large = document.getElementById("large");
+    var xlarge = document.getElementById("xlarge");
+    if(small.checked){
+        alert(totalAmount += 150);
+    }
+    else if(medium.checked){
+        totalAmount += 400;
+    }
+    else if(large.checked){
+        totalAmount += 600;
+    }
+    else if(xlarge.checked){
+        totalAmount += 800;
+    }
 
+    //crust type
+    var cheese =document.getElementById("cheese");
+    var classic =document.getElementById("classic");
+    var cripsy =document.getElementById("cripsy");
+    var glutten =document.getElementById("glutten");
+    var stuffed =document.getElementById("stuffed");
+    var thin =document.getElementById("thin");
+    if(cheese.checked){
+        alert(totalAmount += 200);
+    }
+    else if(classic.checked){
+        totalAmount += 150;
+    }
+    else if(cripsy.checked){
+        totalAmount += 125;
+    }
+    else if(glutten.checked){
+        totalAmount += 80;
+    }
+    else if(stuffed.checked){
+        totalAmount += 150;
+    }
+    else if(thin.checked){
+        totalAmount += 100;
+    }
+    //toppings
 
+    var bacon=document.getElementById("bacon");
+    var blackOlives=document.getElementById("blackOlives");
+    var extraCheese=document.getElementById("extraCheese");
+    var pepper=document.getElementById("pepper");
+    var mushroom=document.getElementById("mushroom");
+    var onion=document.getElementById("onion");
+    var pepperoni=document.getElementById("pepperoni");
+    var pineapple=document.getElementById("pineapple");
+    var sausage=document.getElementById("sausage");
+    var spinach=document.getElementById("spinach");
+
+    if(bacon.checked){
+        alert(totalAmount += 200);
+    }
+    if(blackOlives.checked){
+        totalAmount += 100;
+    }
+    if(extraCheese.checked){
+        totalAmount += 200;
+    }
+    if(pepper.checked){
+        totalAmount += 100;
+    }
+    if(mushroom.checked){
+        totalAmount += 150;
+    }
+    if(onion.checked){
+        totalAmount += 100;
+    }
+    if(pepperoni.checked){
+        totalAmount += 200;
+    }
+    if(pineapple.checked){
+        totalAmount += 150;
+    }
+    if(sausage.checked){
+        totalAmount += 150;
+    }
+    if(spinach.checked){
+        totalAmount += 100;
+    }
+
+    var receipt=`${totalAmount}`;
+    document.querySelector("#charges").textContent=receipt;
+}
