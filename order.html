@@ -13,6 +13,7 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Pizza Maharaja Order Page</title>
 </head>
 <body>
@@ -32,33 +33,37 @@
             </nav>
         </div>
         <div class="container deliveryLocation my-4 bg-success p-5">
-            <div class="jinaBody mx-auto m-3">
-                <div class="jina m-3">
-                    <p>First Name :</p>
-                    <input type="text" class="nameValue" placeholder="Enter name..." required>
+            <form name="details" onsubmit="return false">
+                <div class="detailsBody">
+                    <div class="jinaBody mx-auto m-3">
+                        <div class="jina m-3">
+                            <p>First Name :</p>
+                            <input type="text" class="nameValue" id="nameValue" placeholder="Enter name..." required>
+                        </div>
+                        <div class="phoneNumber m-3">
+                            <p>Phone Num:</p>
+                            <input type="tel" id="phoneNumber" placeholder="Enter Number..." required>
+                        </div>
+                    </div>
+                    <div class="locationBody mx-auto">
+                        <div class="locationHeader">
+                            <p>DELIVERY METHOD</p>
+                        </div>
+                        <div class="deliveryChoice my-4">
+                            <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery" required>
+                            <label for="delivery">Delivery</label>
+                            <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect" required>
+                            <label for="collect">Collect</label>
+                        </div>
+                        <div class="locationName my-4">
+                            <input type="text" id="mahali" placeholder="enter location..." required>
+                        </div>
+                    </div>
+                    <div class="mt-2 submitLocation">
+                        <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliver()">Submit</button>
+                    </div>
                 </div>
-                <div class="phoneNumber m-3">
-                    <p>Phone Num:</p>
-                    <input type="number" placeholder="Enter Number..." required>
-                </div>
-            </div>
-            <div class="locationBody mx-auto">
-                <div class="locationHeader">
-                    <p>DELIVERY METHOD</p>
-                </div>
-                <div class="deliveryChoice my-4">
-                    <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery" required>
-                    <label for="delivery">Delivery</label>
-                    <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect" required>
-                    <label for="collect">Collect</label>
-                </div>
-                <div class="locationName my-4">
-                    <input type="text" id="mahali" placeholder="enter location..." required>
-                </div>
-            </div>
-            <div class="mt-2 submitLocation">
-                <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliver()">Submit</button>
-            </div>
+            </form>
             <div class="marqueeText mt-2">
                 <marquee>Free Delivery Within Nairobi's CBD</marquee>
             </div>
@@ -76,40 +81,43 @@
                         Pizza Size
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item small" href="#">Small</a>
-                        <a class="dropdown-item medium" href="#">Medium</a>
-                        <a class="dropdown-item large" href="#">Large</a>
+                        <a class="dropdown-item small " href="#"><input name="size" type="checkbox"> Small</a>
+                        <a class="dropdown-item medium" href="#"><input name="size" type="checkbox"> Medium</a>
+                        <a class="dropdown-item large" href="#"><input name="size" type="checkbox"> Large</a>
                     </div>
                 </div>
                 <div class="dropdown m-4">
                     <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Crust Type</button>
                     <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item cheeseCrust">Cheese Crust</a>
-                        <a href="#" class="dropdown-item Classic">Classic</a>
-                        <a href="#" class="dropdown-item Crispy">Crispy</a>
-                        <a href="#" class="dropdown-item glutten">Glutten-Free</a>
-                        <a href="#" class="dropdown-item stuffed">Stuffed</a>
-                        <a href="#" class="dropdown-item thin">Thin</a>
+                        <a href="#" class="dropdown-item cheeseCrust"><input name="pizzaSize" type="checkbox"> Cheese Crust</a>
+                        <a href="#" class="dropdown-item Classic"><input name="pizzaSize" type="checkbox"> Classic</a>
+                        <a href="#" class="dropdown-item Crispy"><input name="pizzaSize" type="checkbox"> Crispy</a>
+                        <a href="#" class="dropdown-item glutten"><input name="pizzaSize" type="checkbox"> Glutten-Free</a>
+                        <a href="#" class="dropdown-item stuffed"><input name="pizzaSize" type="checkbox"> Stuffed</a>
+                        <a href="#" class="dropdown-item thin"><input name="pizzaSize" type="checkbox"> Thin</a>
                     </div>
                 </div>
                 <div class="dropdown m-4">
                     <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Toppings</button>
                     <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item bacon">Bacon 🥓 </a>
-                        <a href="#" class="dropdown-item olives">Black Olives</a>
-                        <a href="#" class="dropdown-item pepper">Green Peppers</a>
-                        <a href="#" class="dropdown-item extraCheese">Extra Cheese🧀</a>
-                        <a href="#" class="dropdown-item mushroom">Mushrooms 🍄</a>
-                        <a href="#" class="dropdown-item onions">Onions </a>
-                        <a href="#" class="dropdown-item pepperoni">Pepperoni</a>
-                        <a href="#" class="dropdown-item pineapple">Pineapple🍍</a>
-                        <a href="#" class="dropdown-item sausage">Sausage</a>
-                        <a href="#" class="dropdown-item spinach">Spinach</a>
+                        <a href="#" class="dropdown-item bacon"><input name="pizzaSize" type="checkbox"> Bacon 🥓 </a>
+                        <a href="#" class="dropdown-item olives"><input name="pizzaSize" type="checkbox"> Black Olives</a>
+                        <a href="#" class="dropdown-item pepper"><input name="pizzaSize" type="checkbox"> Green Peppers</a>
+                        <a href="#" class="dropdown-item extraCheese"><input name="pizzaSize" type="checkbox"> Extra Cheese🧀</a>
+                        <a href="#" class="dropdown-item mushroom"><input name="pizzaSize" type="checkbox"> Mushrooms 🍄</a>
+                        <a href="#" class="dropdown-item onions"><input name="pizzaSize" type="checkbox"> Onions </a>
+                        <a href="#" class="dropdown-item pepperoni"><input name="pizzaSize" type="checkbox"> Pepperoni</a>
+                        <a href="#" class="dropdown-item pineapple"><input name="pizzaSize" type="checkbox"> Pineapple🍍</a>
+                        <a href="#" class="dropdown-item sausage"><input name="pizzaSize" type="checkbox"> Sausage</a>
+                        <a href="#" class="dropdown-item spinach"><input name="pizzaSize" type="checkbox"> Spinach</a>
                     </div>
                 </div>
                 <div class="priceCalculator">
                     <div class="result text-center"><p>Total Amount <br>= $ <span>0</span></p></div>
                 </div>
+            </div>
+            <div class="mt-2 submitPizza" align="center">
+                <button type="submit" class="btn btn-warning btn-lg submitPz" id="submitPz" >Submit</button>
             </div>
         </div>
     </div>
@@ -198,6 +206,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"crossorigin="anonymous"></script>
-    <script src="./style.css"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

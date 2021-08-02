@@ -1,14 +1,25 @@
 //This is the delivery method choice part
 
-let deliver= function(){
-    if($("#delivery").checked){
-        $("#mahali").disabled==false;
-        if($("#mahali").textcontent==""){
-            alert("Enter Location");
-        }
+var firstName = document.getElementById("nameValue").value;
+var phoneNumber = document.getElementById("phoneNumber").value;
+var total;
+const deliver= function(){
+    if((document.querySelector("#submitBtn").clicked) && (document.querySelector("#nameValue").value=="" || document.querySelector("#nameValue").value==" " )){
+        alert("Please enter your name!");
     }
-    else if($("#collect").checked){
-        $("#mahali").disabled==true;
+    else if(document.querySelector("#submitBtn").clicked && document.querySelector("#phoneNumber").value==""){
+        alert(`${firstName} please enter your phone number!`);
+    }
+    else if(document.querySelector("#delivery").checked){
+        document.querySelector("#mahali").disabled==false;
+        alert(`${firstName}`);
+
+
+    }
+    else if(document.querySelector("collect").checked){
+        document.querySelector("#mahali").disabled==true;
+        alert(`${firstName}`);
     }
 }
 deliver();
+
