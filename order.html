@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Pizza Maharaja Order Page</title>
+</head>
+<body>
+    <div class="orderBody pt-2" id="orderBody">
+        <!-- navbar section -->
+        <div class="orderNav navBody container">
+            <nav class="navbar navbar-expand-sm my-2">
+                <div class="navbar-brand">
+                    <img class="pizzaLogo" src="./Assets/pizzalogo.png" width="100px" height="100px">
+                </div>
+                <ul class="navbar-light list-unstyled list-inline">
+                    <a class="btn bg-outline-warning btn-lg list-inline-item" href="./index.html">Home</a>
+                    <a class="btn bg-outline-warning btn-lg list-inline-item" href="#menu">Menu</a>
+                    <a class="btn bg-outline-warning btn-lg list-inline-item" href="#page3">Contact Us <span class="fa fa-phone"></span></a>
+                    <a class="btn bg-warning btn-lg list-inline-item disabled" href="./order.html">Order Now <span class="fa fa-shopping-cart"></span></a>
+                </ul>
+            </nav>
+        </div>
+        <div class="container deliveryLocation my-4 bg-success p-5">
+            <form name="details" onsubmit="return false">
+                <div class="detailsBody">
+                    <div class="jinaBody mx-auto m-3">
+                        <div class="jina m-3">
+                            <p>First Name :</p>
+                            <input type="text" class="nameValue" id="nameValue" placeholder="Enter name..." required>
+                        </div>
+                        <div class="phoneNumber m-3">
+                            <p>Phone Num:</p>
+                            <input type="tel" id="phoneNumber" placeholder="Enter Number..." required>
+                        </div>
+                    </div>
+                    <div class="locationBody mx-auto">
+                        <div class="locationHeader">
+                            <p>DELIVERY METHOD</p>
+                        </div>
+                        <div class="deliveryChoice my-4">
+                            <input type="radio" name="delivery" value="delivery" id="delivery" class="delivery" required>
+                            <label for="delivery">Delivery</label>
+                            <input type="radio" name="delivery" value="selfCollect" id="collect" class="collect" required>
+                            <label for="collect">Collect</label>
+                        </div>
+                        <div class="locationName my-4">
+                            <input type="text" id="mahali" placeholder="enter location..." required>
+                        </div>
+                    </div>
+                    <div class="mt-2 submitLocation">
+                        <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliver()">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div class="marqueeText mt-2">
+                <marquee>Free Delivery Within Nairobi's CBD</marquee>
+            </div>
+        </div>
+        <div class="menuItemsBody my-4" id="menu">
+            <div class="container menuText">
+                <h1 class="text-center" style="color:#a14220
+                ">
+                    Menu
+                </h1>
+            </div>
+            <div class="container menuBody">
+                <div class="dropdown m-4">
+                    <button class="btn btn-outline-warning dropdown-toggle"type="button" data-toggle="dropdown">
+                        Pizza Size
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item small " href="#"><input name="size" type="checkbox" onclick="pizzaSize(this)"> Small</a>
+                        <a class="dropdown-item medium" href="#"><input name="size" type="checkbox" onclick="pizzaSize(this)"> Medium</a>
+                        <a class="dropdown-item large" href="#"><input name="size" type="checkbox" onclick="pizzaSize(this)"> Large</a>
+                    </div>
+                </div>
+                <div class="dropdown m-4">
+                    <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Crust Type</button>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" class="dropdown-item cheeseCrust"><input name="pizzaSize" type="checkbox"> Cheese Crust</a>
+                        <a href="#" class="dropdown-item Classic"><input name="pizzaSize" type="checkbox"> Classic</a>
+                        <a href="#" class="dropdown-item Crispy"><input name="pizzaSize" type="checkbox"> Crispy</a>
+                        <a href="#" class="dropdown-item glutten"><input name="pizzaSize" type="checkbox"> Glutten-Free</a>
+                        <a href="#" class="dropdown-item stuffed"><input name="pizzaSize" type="checkbox"> Stuffed</a>
+                        <a href="#" class="dropdown-item thin"><input name="pizzaSize" type="checkbox"> Thin</a>
+                    </div>
+                </div>
+                <div class="dropdown m-4">
+                    <button class="btn btn-outline-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-disabled="false" aria-pressed="false">Toppings</button>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" class="dropdown-item bacon"><input name="pizzaSize" type="checkbox"> Bacon 🥓 </a>
+                        <a href="#" class="dropdown-item olives"><input name="pizzaSize" type="checkbox"> Black Olives</a>
+                        <a href="#" class="dropdown-item pepper"><input name="pizzaSize" type="checkbox"> Green Peppers</a>
+                        <a href="#" class="dropdown-item extraCheese"><input name="pizzaSize" type="checkbox"> Extra Cheese🧀</a>
+                        <a href="#" class="dropdown-item mushroom"><input name="pizzaSize" type="checkbox"> Mushrooms 🍄</a>
+                        <a href="#" class="dropdown-item onions"><input name="pizzaSize" type="checkbox"> Onions </a>
+                        <a href="#" class="dropdown-item pepperoni"><input name="pizzaSize" type="checkbox"> Pepperoni</a>
+                        <a href="#" class="dropdown-item pineapple"><input name="pizzaSize" type="checkbox"> Pineapple🍍</a>
+                        <a href="#" class="dropdown-item sausage"><input name="pizzaSize" type="checkbox"> Sausage</a>
+                        <a href="#" class="dropdown-item spinach"><input name="pizzaSize" type="checkbox"> Spinach</a>
+                    </div>
+                </div>
+                <div class="priceCalculator">
+                    <div class="result text-center"><p>Total Amount <br>= $ <span>0</span></p></div>
+                </div>
+            </div>
+            <div class="mt-2 submitPizza" align="center">
+                <button type="submit" class="btn btn-warning btn-lg submitPz" id="submitPz" >Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- I started here when pasting the footer section -->
+
+    <div id="up" class="d-block m-3" align="right">
+        <a class="btn btn-outline-success m-2" href="#orderBody"><p class="p-1">⏫<br>Scroll Up</p></a>
+    </div>
+    <div class="page3" id="page3">
+        <div class="contact card">
+            <div class="contactHeader text-center mt-5">
+                <p class="card-header">
+                    Contact Us 
+                </p>
+            </div>
+            <div class="card-body footer">
+                <div class="footer1">
+                    <div class="findUs">
+                        <h1>
+                            Find Us
+                        </h1>
+                        <p class="findUsP text-justify">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, perspiciatis. Quaerat at quas, corrupti harum beatae quisquam minima ullam, alias optio ipsum eum dicta doloribus sequi sed consequuntur. Ipsum, expedita.
+                        </p>
+                        <div class="headquater">
+                            <p class="fa fa-map-marker location">
+                                Nairobi, CBD
+                            </p>
+                        </div>
+                        <div class="telephone">
+                            <p class="fa fa-mobile">
+                                +254712345678
+                            </p>
+                        </div>
+                        <div class="email">
+                            <p class="fa fa-envelope">
+                                daniel.muruthi@student.moringaschool.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="emptyLine"></div>
+                    <div class="services">
+                        <h1>Services</h1>
+                        <ul class="list-unstyled text-center footerList">
+                            <li class="m-2">Free Delivery</li>
+                            <li class="m-2">Event Catering</li>
+                            <li class="m-2">Private Cooking</li>
+                        </ul>
+                    </div>
+                    <div class="emptyLine"></div>
+                    <div class="jobs">
+                        <h1>Careers</h1>
+                        <ul class="list-unstyled text-center footerList">
+                            <li class="m-2">Job Openings</li>
+                            <li class="m-2">Employee Success</li>
+                            <li class="m-2">Benefits</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="emptyLine1"></div>
+                <div class="socials card-footer">
+                    <div class="icons">
+                        <div class="facebook m-3">
+                            <img src="./Assets/facebook.png">
+                        </div>
+                        <div class="twitter m-3">
+                            <img src="./Assets/twitter.png">
+                        </div>
+                        <div class="googlePlus m-3">
+                            <img src="./Assets/g_plus.png">
+                        </div>
+                    </div>
+                    <div class="copyright text-center">
+                        <p>www.<span class="text-warning">pizzamaharaja</span>.com</p>
+                        <p>© 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+.page1{
+    background-image: url("./Assets/unos.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* background-color:whitesmoke; */
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navBody{
+    /* background: url("./Assets/background.jpg"); */
+    border:2px solid grey;
+    background-color:white;
+    height:fit-content !important;
+    width:100%;
+    box-shadow:0px, 0px, 4px, 3px grey !important;
+    
+    /* border:2px solid green; */
+    /* border-radius: 1rem; */
+}
+.pizzaLogo{
+    /* border-radius: 2rem !important; */
+    border:2px solid black;
+    box-shadow:0px,0px,4px,3px, white;
+    margin-left: 1rem;
+
+}
+nav > ul{
+    vertical-align:middle;
+    line-height:3rem;
+    font-size:xx-large;
+    display:flex;
+    justify-content: space-around;
+    margin-left:auto;
+    /* border:2px solid rgb(76, 76, 219); */
+    width:60%;
+    font-family: Gothic A1;
+}
+nav > ul >a:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+.homeBody{
+    display:flex;
+    flex-direction: column;
+    border:2px solid yellow;
+    background:url("./Assets/background.jpg");
+    width:75%;
+    align-items:center;
+}
+.maharaja{
+    border:2px solid white;
+    box-shadow:0px, 0px, 4px, 3px;
+    /* background-color:rgba(150,150,150,0.5); */
+    padding:10px;
+    border-radius:1rem;
+    text-align:center;
+    width:60%;
+}
+.intro p{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+
+}
+.intro2{
+    font-family: 'Satisfy', cursive;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+}
+.intro2 p{
+    /* border:2px solid white; */
+}
+.intro2 img{
+    /* border:2px solid white; */
+}
+.hrLine{
+    border:2px solid #DEB524;
+    width:60%;
+}
+.pizzano{
+    border:2px solid black;
+    /* background-color:rgba(255, 255, 255,0.3); */
+    padding:2rem;
+    width:60%;
+    
+}
+.homePizzaTitle{
+    display:flex;
+    justify-content: center;
+    border:2px solid brown;
+}
+.homePizzaTitle p{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+}
+.st1{
+    text-align:center;
+    color:rgb(215, 231, 67);
+}
+.st2{
+    color:rgb(195, 29, 29);
+    font-weight:bolder;
+    border:2px solid purple;
+}
+.pizzaPg1{
+    /* border:2px solid gold; */
+}
+.pizzaPg1>.pzPic{
+
+
+}
+.page2{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(195, 29, 29,1) 35%, rgba(222,181,36,1) 100%);
+    width:100%;
+    height:100%;
+    padding-bottom:2rem;
+}
+.pgTwoHd > h1{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+}
+.aboutPr{
+    border:2px solid blue;
+    box-shadow:0px 0px 4px 3px white;
+    width:75%;
+    padding:3rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+.aboutPr > p{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    text-align:center;
+}
+.page3{
+    font-family: Gothic A1;
+}
+.contact{
+    height:3rem;
+}
+.contactHeader{
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 45px;
+    color:#DEB524;
+}
+.location{
+    display:flex;
+}
+.footer1{
+    display:flex;
+    justify-content:space-around;
+}
+.findUs{
+    width:32%;
+}
+.findUsP{
+    /* width:32%; */
+    /* border:2px solid blue; */
+}
+.emptyLine{
+    height:15rem;
+    width:1px;
+    border:1px solid grey;
+    box-shadow:0px,0px,4px,3px grey;
+    margin:1rem;
+}
+.services{
+    /* border:2px solid green; */
+    width:32%;
+    vertical-align:middle;
+    line-height:3rem;
+}
+.jobs{
+    vertical-align:middle;
+    line-height:3rem;
+    width:32%;
+    /* border:2px solid green; */
+}
+.footerList{
+    font-weight:bold;
+    font-size: 24px;
+}
+.findUs h1, .services h1, .jobs h1{
+    text-align:center;
+}
+#up{
+}
+#up a{
+    border:1px solid white;
+    box-shadow:0px 0px 3px 2.5px grey;
+    border-radius:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:1rem;
+    width:5rem;
+    height:5rem;
+    text-align:center;
+}
+
+.socials >.icons{
+    display:flex;
+    justify-content:center;
+}
+.facebook:hover, .twitter:hover, .googlePlus:hover{
+    cursor:pointer;
+    transform:scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------Order.html----------- */
+
+
+
+
+
+
+.orderBody{
+    background-image: url("./Assets/imgonline-com-ua-twotoone-A9hhfrH6ASG7.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    width:100%;
+    height:100%;
+}
+.orderNav{
+    /* margin-top:; */
+}
+.deliveryLocation{
+    border:2px solid white;
+}
+.jinaBody{
+    border:2px solid white;
+    width:max-content;
+}
+.jina{
+    display:flex;
+    text-align:center;
+    border:2px solid blue;
+}
+.jina p{
+    border:2px solid gold;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-family:Gothic A1;
+}
+.phoneNumber{
+    display:flex;
+    text-align:center;
+    border:2px solid blue;
+}
+.phoneNumber p{
+    border:2px solid gold;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-family:Gothic A1;
+}
+.delivery{
+    font-family:Gothic A1;
+}
+.locationBody{
+    border:2px solid white;
+    width:max-content;
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;
+}
+.submitLocation{
+    text-align:center;
+}
+.marqueeText{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;  
+}
+.menuItemsBody{
+    color:white;
+    font-size:25px;
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: 800;
+    padding:1rem;
+}
+.menuText{
+    border:2px solid rgba(249, 210, 67, 0.5);
+    background-color:#DEB524;
+
+}
+.menuBody{
+    border:2px solid blue;
+    display:flex;
+    justify-content: space-around;
+    background-color:rgba(161, 66, 32 ,0.8);
+    height:30rem;
+
+}
+.priceCalculator{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+.result{
+    vertical-align:middle;
+    line-height:3rem;
+    border:2px solid gold;
+    width:15rem;
+    height:max-content;
+    background:rgba(249, 210, 67, 0.5);
+    color:white
+}
