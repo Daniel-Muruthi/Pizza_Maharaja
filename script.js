@@ -1,53 +1,3 @@
-
-var phoneNumber=document.getElementById("phoneNumber").value;
-let delivery=document.getElementById("delivery");
-let collect=document.getElementById("collect");
-// let location=document.getElementById("mahali");
-//make input location key inactive for collect
-function activate(){
-    if(delivery.checked){
-        document.getElementById("mahali").disabled=false;
-    }
-    else if(collect.checked){
-        document.getElementById("mahali").value="CBD";
-        document.getElementById("mahali").disabled=true;
-    }
-}
-activate();
-//submit button
-
-//capturing the name value
-function getName(){
-    var jina=document.getElementById("nameValue").value;
-    return jina;
-}
-getName();
-function getPhone(){
-    var phoneNumber=document.getElementById("phoneNumber").value;
-    return phoneNumber;
-}
-getPhone();
-function getLocation(){
-    let location=document.getElementById("mahali").value;
-    return location;
-}
-getLocation();
-
-let identity=getName();
-let myLine = getPhone();
-let zone = getLocation();
-function deliveryMode(){
-    Swal.fire({
-        icon: 'info',
-        title: `Hello ${getName()} 👋`,
-        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour!`,
-        button:'<a href="#menu">ok</a>'
-    })
-}
-deliveryMode();
-
-
-
 // Ensuring only one checkbox can be checked at a time for pizza size
 
 function pizzaSize(checkbox){
@@ -154,7 +104,58 @@ function boxChecker(){
     if(spinach.checked){
         totalAmount += 100;
     }
+    let pizzaAmount = Number(document.querySelector("#pizzaCount").value);
 
-    var receipt=`${totalAmount}`;
+    var receipt=(totalAmount * pizzaAmount);
     document.querySelector("#charges").textContent=receipt;
 }
+
+
+//delivery code
+var phoneNumber=document.getElementById("phoneNumber").value;
+let delivery=document.getElementById("delivery");
+let collect=document.getElementById("collect");
+// let location=document.getElementById("mahali");
+//make input location key inactive for collect
+function activate(){
+    if(delivery.checked){
+        document.getElementById("mahali").disabled=false;
+    }
+    else if(collect.checked){
+        document.getElementById("mahali").value="CBD";
+        document.getElementById("mahali").disabled=true;
+    }
+}
+activate();
+//submit button
+
+//capturing the name value
+function getName(){
+    var jina=document.getElementById("nameValue").value;
+    return jina;
+}
+getName();
+function getPhone(){
+    var phoneNumber=document.getElementById("phoneNumber").value;
+    return phoneNumber;
+}
+getPhone();
+function getLocation(){
+    let location=document.getElementById("mahali").value;
+    return location;
+}
+getLocation();
+
+let identity=getName();
+let myLine = getPhone();
+let zone = getLocation();
+function deliveryMode(){
+    Swal.fire({
+        icon: 'info',
+        title: `Hello ${getName()} 👋`,
+        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour!`,
+        button:'<a href="#menu">ok</a>'
+    })
+}
+deliveryMode();
+
