@@ -158,14 +158,27 @@ function boxChecker(){
     } 
     getLocation();
 
-    Swal.fire({
-        icon: 'info',
-        title: `Hello ${getName()} 👋`,
-        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
-        button:'<a href="#menu">ok</a>'
-    })
+    if((getName())=="" || (getName())==" "){
+        alert(`Please enter your name`);
+        document.querySelector("#nameValue").style.border="4px solid red";
+    }
+    else if((getPhone())=="" || (getPhone())==" "){
+        alert(`Please enter your phoneNumber`);
+        document.querySelector("#phoneNumber").style.border="4px solid red";
+    }
+    else if((getLocation())=="" || (getLocation())==" "){
+        alert(`Please choose a delivery mode to enter a location`);
+        document.querySelector("#mahali").style.border="4px solid red";
+    }
+    else{
+        Swal.fire({
+            icon: 'info',
+            title: `Hello ${getName()} 👋`,
+            text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
+            button:'<a href="#menu">ok</a>'
+        })
 
-
+    }
 }
 
 
