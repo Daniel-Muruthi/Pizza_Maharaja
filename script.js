@@ -162,8 +162,8 @@ function boxChecker(){
         icon: 'info',
         title: `Hello ${getName()} 👋`,
         text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
-    button:'<a href="#menu">ok</a>'
-})
+        button:'<a href="#menu">ok</a>'
+    })
 
 
 }
@@ -264,5 +264,12 @@ function calc(){
 
     var receipt=(totalAmount * pizzaAmount);
     document.querySelector("#charges").textContent=receipt;
+
+    Swal.fire({
+        icon: 'info',
+        title: `Hello 👋`,
+        text:`The total Amount for your pizza order is ${receipt} Ksh. Please add your delivery details below` ,
+        button:'<a href="#menu">ok</a>'
+    })
        
 }
