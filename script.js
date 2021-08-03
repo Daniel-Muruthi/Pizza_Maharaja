@@ -1,3 +1,16 @@
+function activate(){
+    if(delivery.checked){
+        document.getElementById("mahali").disabled=false;
+    }
+    else if(collect.checked){
+        document.getElementById("mahali").value="CBD";
+        document.getElementById("mahali").disabled=true;
+    }
+}
+activate();
+
+
+
 // Ensuring only one checkbox can be checked at a time for pizza size
 
 function pizzaSize(checkbox){
@@ -108,54 +121,48 @@ function boxChecker(){
 
     var receipt=(totalAmount * pizzaAmount);
     document.querySelector("#charges").textContent=receipt;
-}
+    
+    
 
+    //delivery code
 
-//delivery code
-var phoneNumber=document.getElementById("phoneNumber").value;
-let delivery=document.getElementById("delivery");
-let collect=document.getElementById("collect");
-// let location=document.getElementById("mahali");
-//make input location key inactive for collect
-function activate(){
+    var phoneNumber=document.getElementById("phoneNumber").value;
+    let delivery=document.getElementById("delivery");
+    let collect=document.getElementById("collect");
+    // let location=document.getElementById("mahali");
+    //make input location key inactive for collect
     if(delivery.checked){
         document.getElementById("mahali").disabled=false;
     }
     else if(collect.checked){
-        document.getElementById("mahali").value="CBD";
-        document.getElementById("mahali").disabled=true;
+    document.getElementById("mahali").value="CBD";
+    document.getElementById("mahali").disabled=true;
     }
-}
-activate();
-//submit button
 
-//capturing the name value
-function getName(){
-    var jina=document.getElementById("nameValue").value;
-    return jina;
-}
-getName();
-function getPhone(){
-    var phoneNumber=document.getElementById("phoneNumber").value;
-    return phoneNumber;
-}
-getPhone();
-function getLocation(){
-    let location=document.getElementById("mahali").value;
-    return location;
-}
-getLocation();
+    //submit button
 
-let identity=getName();
-let myLine = getPhone();
-let zone = getLocation();
-function deliveryMode(){
+    //capturing the name value
+    function getName(){
+        var jina=document.getElementById("nameValue").value;
+        return jina;
+    }
+    getName();
+    function getPhone(){
+        var phoneNumber=document.getElementById("phoneNumber").value;
+        return phoneNumber;
+    }
+    getPhone();
+    function getLocation(){
+        let location=document.getElementById("mahali").value;
+        return location;
+    } 
+    getLocation();
+
     Swal.fire({
         icon: 'info',
         title: `Hello ${getName()} 👋`,
-        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour!`,
+        text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
         button:'<a href="#menu">ok</a>'
     })
-}
-deliveryMode();
 
+}

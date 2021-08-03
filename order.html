@@ -83,7 +83,7 @@
                 <div class="priceCalculator">
                     <div class="pizzaNum">
                         <p>Number of Pizzas</p>
-                        <input type="number" placeholder="No of Pizzas" id="pizzaCount">
+                        <input type="number" placeholder="No of Pizzas" id="pizzaCount" value="1" required>
                     </div>
                     <div class="result text-center my-2"><p>Total Amount <br>= Ksh <span id="charges">0</span></p></div>
                 </div>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="mt-2 submitLocation">
-                    <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="deliveryMode()">Checkout</button>
+                    <button type="submit" class="btn btn-outline-warning btn-lg submitBtn" id="submitBtn" onclick="boxChecker()">Checkout</button>
                 </div>
             </div>
             <div class="marqueeText mt-2">
