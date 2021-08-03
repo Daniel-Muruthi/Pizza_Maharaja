@@ -36,16 +36,23 @@ function boxChecker(){
     var medium = document.getElementById("medium");
     var large = document.getElementById("large");
     var xlarge = document.getElementById("xlarge");
+    var pzOrder= String("");
+    var crOrder=String("");
+    var tpOrder=String("")
     if(small.checked){
+        pzOrder="Small";
         totalAmount += 150;
     }
     else if(medium.checked){
+        pzOrder="Medium";
         totalAmount += 400;
     }
     else if(large.checked){
+        pzOrder="Large";
         totalAmount += 600;
     }
     else if(xlarge.checked){
+        pzOrder="Extra Large";
         totalAmount += 800;
     }
 
@@ -57,21 +64,27 @@ function boxChecker(){
     var stuffed =document.getElementById("stuffed");
     var thin =document.getElementById("thin");
     if(cheese.checked){
+        crOrder="Cheese Crust";
         totalAmount += 200;
     }
     else if(classic.checked){
+        crOrder="Classic Crust";
         totalAmount += 150;
     }
     else if(cripsy.checked){
+        crOrder="Crispy Crust";
         totalAmount += 125;
     }
     else if(glutten.checked){
+        crOrder="Glutten-Free Crust";
         totalAmount += 80;
     }
     else if(stuffed.checked){
+        crOrder="Stuffed Crust";
         totalAmount += 150;
     }
     else if(thin.checked){
+        crOrder="Thin Crust";
         totalAmount += 100;
     }
     //toppings
@@ -88,33 +101,43 @@ function boxChecker(){
     var spinach=document.getElementById("spinach");
 
     if(bacon.checked){
+        tpOrder +=", Bacon ";
         totalAmount += 200;
     }
     if(blackOlives.checked){
+        tpOrder +=", Black Olives ";
         totalAmount += 100;
     }
     if(extraCheese.checked){
+        tpOrder +=", Extra Cheese";
         totalAmount += 200;
     }
     if(pepper.checked){
+        tpOrder+=", Green Peppers ";
         totalAmount += 100;
     }
     if(mushroom.checked){
+        tpOrder +=", Mushroom ";
         totalAmount += 150;
     }
     if(onion.checked){
+        tpOrder+=", Onions ";
         totalAmount += 100;
     }
     if(pepperoni.checked){
+        tpOrder+=", Pepperoni ";
         totalAmount += 200;
     }
     if(pineapple.checked){
+        tpOrder+=", Pineapple ";
         totalAmount += 150;
     }
     if(sausage.checked){
+        tpOrder+=", Sausage ";
         totalAmount += 150;
     }
     if(spinach.checked){
+        tpOrder=" Spinach";
         totalAmount += 100;
     }
     let pizzaAmount = Number(document.querySelector("#pizzaCount").value);
@@ -174,7 +197,7 @@ function boxChecker(){
         Swal.fire({
             icon: 'info',
             title: `Hello ${getName()} 👋`,
-            text:`Your pizza order has been made and will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
+            text:`Your pizza order (${pzOrder}, ${crOrder} topped with ${tpOrder}) has been made. The Order will be delivered at ${getLocation()} within the hour! The total Amount is ${receipt} Ksh` ,
             button:'<a href="#menu">ok</a>'
         })
 
